@@ -15,6 +15,7 @@
     "next": "15.4.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-error-boundary": "^6.0.0",
     "react-hook-form": "^7.61.1",
     "usehooks-ts": "^3.1.1",
     "zod": "^4.0.13"
@@ -30,6 +31,9 @@
     "editorconfig": "^3.0.1",
     "eslint": "^9",
     "eslint-config-next": "^15.4.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
