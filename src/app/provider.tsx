@@ -1,3 +1,5 @@
+"use client";
+
 import type { ReactNode } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
@@ -9,8 +11,10 @@ type AppProviderProps = {
 
 export default function AppProvider({ children }: AppProviderProps) {
   return (
-    <ErrorBoundary FallbackComponent={MainErrorFallback}>
-      {children}
-    </ErrorBoundary>
+    <>
+      <ErrorBoundary FallbackComponent={MainErrorFallback}>
+        {children}
+      </ErrorBoundary>
+    </>
   );
 }
