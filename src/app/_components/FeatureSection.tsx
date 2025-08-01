@@ -1,15 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { backOut, easeOut, motion } from "framer-motion";
 
 export default function FeatureSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
     },
   };
 
@@ -24,8 +21,8 @@ export default function FeatureSection() {
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.7,
-        ease: "easeOut",
+        duration: 0.3,
+        ease: easeOut,
       },
     },
   };
@@ -36,9 +33,8 @@ export default function FeatureSection() {
       scale: 1,
       rotate: 0,
       transition: {
-        duration: 0.8,
-        ease: "backOut",
-        delay: 0.3,
+        duration: 0.4,
+        ease: backOut,
       },
     },
   };
@@ -82,7 +78,7 @@ export default function FeatureSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
@@ -99,6 +95,7 @@ export default function FeatureSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
+          transition={{ staggerChildren: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
         >
           {features.map((feature, index) => (
@@ -108,7 +105,7 @@ export default function FeatureSection() {
               whileHover={{
                 y: -8,
                 scale: 1.02,
-                transition: { duration: 0.3, ease: "easeOut" },
+                transition: { duration: 0.15, ease: "easeOut" },
               }}
               whileTap={{ scale: 0.98 }}
               className="group relative bg-white/80 backdrop-blur-sm p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl text-center shadow-lg hover:shadow-2xl border border-gray-200/50 cursor-pointer transition-all duration-300"
@@ -128,7 +125,7 @@ export default function FeatureSection() {
               <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
                 viewport={{ once: true }}
                 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 group-hover:text-blue-900 transition-colors duration-300"
               >
@@ -138,7 +135,7 @@ export default function FeatureSection() {
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="text-sm sm:text-base text-gray-600 leading-relaxed"
               >
@@ -157,7 +154,7 @@ export default function FeatureSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mt-12 sm:mt-16 lg:mt-20"
         >
