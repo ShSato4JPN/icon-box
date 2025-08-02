@@ -20,7 +20,6 @@ export default function Footer() {
             SNSアイコンの一括管理で、あなたのデジタルプレゼンスを次のレベルへ。
           </p>
         </div>
-
         {/* Links */}
         <div className="flex justify-center flex-wrap gap-6 sm:gap-8 mb-8">
           {footerLinks.map((link) => (
@@ -33,10 +32,6 @@ export default function Footer() {
             </a>
           ))}
         </div>
-
-        {/* Divider */}
-        <div className="h-px bg-gray-700 mb-8"></div>
-
         {/* Copyright */}
         <div className="text-center text-gray-400 text-sm">
           <p>&copy; {currentYear} icon-box. All rights reserved.</p>
