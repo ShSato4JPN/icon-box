@@ -4,6 +4,7 @@ import {
   AppleLoginButton,
   DiscordLoginButton,
   FacebookLoginButton,
+  GithubLoginButton,
   GoogleLoginButton,
   InstagramLoginButton,
   XLoginButton,
@@ -25,6 +26,7 @@ export default function Page() {
           <FacebookLoginButton text="Facebookでログイン" align="center" />
           <InstagramLoginButton text="Instagramでログイン" align="center" />
           <DiscordLoginButton text="Discordでログイン" align="center" />
+          <GithubLoginButton text="GitHubでログイン" align="center" />
         </div>
         <div className="px-8 py-4">
           <p className="text-sm text-gray-500">
