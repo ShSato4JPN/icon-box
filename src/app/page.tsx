@@ -1,11 +1,12 @@
 import FeatureSection from "@/app/_components/FeatureSection";
 import HeroSection from "@/app/_components/HeroSection";
+import TopLayout from "@/components/layout/top-layout";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-pink-50">
+    <TopLayout>
       <HeroSection />
       <FeatureSection />
-    </div>
+    </TopLayout>
   );
 }
